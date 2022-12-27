@@ -289,3 +289,5 @@ zsdoc/data
 # End of https://www.toptal.com/developers/gitignore/api/vim,macos,windows,zsh,node,linux,visualstudiocode,dotenv
 
 db/schema.sql
+node_modules
+.env.test
