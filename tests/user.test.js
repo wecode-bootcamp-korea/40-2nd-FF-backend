@@ -93,4 +93,3 @@ describe('Kakao Sign In', () => {
             .expect({message: 'Request failed with status code 400'})
     })    
 })
-
