@@ -32,4 +32,8 @@ const kakaoSignIn = async(code) => {
         return accessToken
     }
 
-module.exports = { kakaoSignIn }
+const getUserById = async(userId) => {
+    return await userDao.getUserById(userId)
+} 
+
+module.exports = { kakaoSignIn, getUserById }
