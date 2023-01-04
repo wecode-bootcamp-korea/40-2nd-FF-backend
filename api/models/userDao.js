@@ -36,4 +36,19 @@ const getUserBySocialId = async(socialId) => {
     return userInfo
 }
 
-module.exports = { getUserBySocialId, createUser }
+const getUserById = async(userId) => {
+    const [result] = await appDataSource.query(
+        `SELECT
+            id,
+            name,
+            email,
+            gender,
+            social_id
+        FROM users
+        WHERE id=?
+        `, [userId]
+    )
+    return result
+}
+
+module.exports = { getUserBySocialId, createUser, getUserById }
